@@ -27,6 +27,15 @@ function Form() {
   // to prevent the instant loading
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!description) return;
+
+    const newItem = { description, quantity, packed: false, id: Date.now() };
+    console.log(newItem);
+
+    // to go back to its initial state after submit
+    setDescription("");
+    setQuantity(1);
   }
 
   return (
