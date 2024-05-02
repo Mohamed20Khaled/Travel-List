@@ -24,6 +24,7 @@ function Form() {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
+  // to prevent the instant loading
   function handleSubmit(e) {
     e.preventDefault();
   }
